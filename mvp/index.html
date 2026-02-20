@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Putra Febrian | Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#10B981'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- SCROLL ANIMATION (VARIATIVE) -->
+  <style>
+    /* BASE */
+    .reveal {
+      opacity: 0;
+      filter: blur(6px);
+      transition-property: opacity, transform, filter;
+      transition-duration: 0.9s;
+      transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: none;
+      filter: blur(0);
+    }
+
+    /* VARIANTS */
+    .reveal-up { transform: translateY(48px); }
+    .reveal-down { transform: translateY(-48px); }
+    .reveal-left { transform: translateX(-48px); }
+    .reveal-right { transform: translateX(48px); }
+    .reveal-zoom { transform: scale(0.94); }
+    .reveal-tilt {
+      transform: translateY(32px) rotateX(6deg);
+      transform-origin: top;
+    }
+
+    /* DELAYS */
+    .delay-1 { transition-delay: .1s; }
+    .delay-2 { transition-delay: .2s; }
+    .delay-3 { transition-delay: .3s; }
+    .delay-4 { transition-delay: .4s; }
+  </style>
+</head>
+
+<body class="relative text-slate-900 antialiased overflow-x-hidden">
+
+<!-- ================= BACKGROUND ================= -->
+<div class="absolute inset-0 -z-10">
+  <div class="absolute top-0 left-0 w-full h-[700px]
+              bg-gradient-to-b from-emerald-50/70 to-transparent"></div>
+
+  <div class="absolute -top-40 -right-40 w-[420px] h-[420px]
+              bg-emerald-300/20 rounded-full blur-3xl"></div>
+
+  <div class="absolute top-[45%] -left-40 w-[360px] h-[360px]
+              bg-teal-200/20 rounded-full blur-3xl"></div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <a href="index.html" class="flex items-center gap-3 font-semibold">
+      <span class="w-2.5 h-2.5 rounded-full bg-accent"></span>
+      <span>Putra Febrian</span>
+    </a>
+
+    <div class="flex gap-8 text-sm text-slate-600">
+      <a href="index.html"
+         class="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px]
+                after:w-full after:bg-accent">
+        Home
+      </a>
+      <a href="about.html" class="hover:text-slate-900">About</a>
+      <a href="skills.html" class="hover:text-slate-900">Skills</a>
+      <a href="projects.html" class="hover:text-slate-900">Projects</a>
+      <a href="contact.html"
+         class="px-4 py-1.5 rounded-md border border-slate-300
+                hover:bg-slate-50 transition">
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<main class="relative max-w-6xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center">
+
+  <!-- TEXT -->
+  <div class="reveal reveal-up">
+    <div class="flex items-center gap-3 text-sm text-slate-500">
+      <span class="w-8 h-[1px] bg-accent"></span>
+      <span>Security-aware developer</span>
+    </div>
+
+    <h1 class="mt-4 text-4xl md:text-5xl font-bold">
+      Putra Febrian
+    </h1>
+
+    <p class="mt-4 text-lg text-slate-600">
+      Web Developer with Networking & Web Security Background
+    </p>
+
+    <p class="mt-6 text-slate-600 max-w-xl leading-relaxed">
+      Building web applications with a security-first mindset,
+      grounded in networking fundamentals and backend systems.
+    </p>
+
+    <div class="mt-10 flex gap-4">
+      <a href="projects.html"
+         class="px-6 py-3 rounded-md bg-accent text-white text-sm
+                hover:bg-emerald-600 transition">
+        View Projects
+      </a>
+      <a href="contact.html"
+         class="px-6 py-3 rounded-md border border-slate-300 text-sm
+                hover:border-slate-400 transition">
+        Contact Me
+      </a>
+    </div>
+  </div>
+
+  <!-- IMAGE -->
+  <div class="relative reveal reveal-zoom delay-2 flex justify-center">
+    <div class="absolute inset-0 -z-10 opacity-[0.06]"
+         style="background-image:
+         linear-gradient(#000 1px, transparent 1px),
+         linear-gradient(90deg,#000 1px, transparent 1px);
+         background-size:40px 40px;"></div>
+
+    <img src="img/profile_home.png"
+         class="h-[520px] object-contain relative z-10">
+
+    <div class="absolute -bottom-2 w-[360px] h-[8px]
+                bg-emerald-200/70 rounded-full blur-[0.5px]"></div>
+  </div>
+</main>
+
+<!-- ================= ABOUT ================= -->
+<section class="relative overflow-hidden">
+
+  <!-- BACKGROUND -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0
+                bg-gradient-to-b from-white via-slate-50 to-white"></div>
+
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                w-[520px] h-[520px] border border-emerald-200 rounded-full"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-6 py-28">
+<div class="text-right">
+  <div class="flex items-center justify-end gap-3 text-sm text-slate-500">
+    <span>Profil Singkat</span>
+    <span class="w-10 h-[1px] bg-accent"></span>
+  </div>
+
+  <h2 class="mt-4 text-3xl md:text-4xl font-semibold">
+    Tentang Saya
+  </h2>
+</div>
+
+
+
+    <!-- CONTENT -->
+    <div class="mt-16 grid md:grid-cols-2 gap-16 items-start">
+
+      <!-- LEFT : JOURNEY -->
+      <div class="relative pl-8 border-l border-slate-200
+                  reveal reveal-left delay-1">
+
+        <p class="text-slate-600 leading-relaxed">
+          Saya memiliki latar belakang pendidikan di bidang
+          <span class="font-medium text-slate-800">
+            Teknik Komputer dan Jaringan (TKJ)
+          </span>,
+          yang membentuk pemahaman saya tentang bagaimana sistem,
+          jaringan, dan data saling terhubung.
+        </p>
+
+        <p class="mt-4 text-slate-600 leading-relaxed">
+          Seiring waktu, fokus saya berkembang ke
+          <span class="font-medium text-slate-800">
+            Web Development
+          </span>,
+          khususnya pada backend dan logika sistem, hingga akhirnya
+          memperdalam minat di bidang
+          <span class="font-medium text-slate-800">
+            Web Security dan Cyber Security.
+          </span>
+        </p>
+
+        <!-- TIMELINE -->
+        <div class="mt-8 space-y-4 text-sm">
+          <div class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent"></span>
+            <span>TKJ → Dasar jaringan & sistem</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent"></span>
+            <span>Web Development → Backend & arsitektur</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-accent"></span>
+            <span>Cyber Security → Secure-by-design mindset</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT : FOCUS & VALUE -->
+      <div class="reveal reveal-up delay-2">
+
+        <p class="text-slate-600 leading-relaxed">
+          Saat ini, saya berfokus pada pengembangan aplikasi web
+          dengan pendekatan
+          <span class="font-medium text-slate-800">
+            security-first
+          </span>,
+          terutama pada sisi backend, autentikasi, dan alur data.
+        </p>
+
+        <p class="mt-4 text-slate-600 leading-relaxed">
+          Saya percaya bahwa sistem yang baik bukan hanya berjalan,
+          tetapi juga
+          <span class="font-medium text-slate-800">
+            aman, dapat dipelihara, dan tahan terhadap kesalahan desain.
+          </span>
+        </p>
+
+        <!-- VALUE CARDS -->
+        <div class="mt-8 grid grid-cols-2 gap-4 text-sm">
+
+          <div class="p-4 bg-white border rounded-lg">
+            <p class="font-medium">Security Awareness</p>
+            <p class="mt-1 text-slate-500">
+              Memikirkan risiko sejak tahap desain
+            </p>
+          </div>
+
+          <div class="p-4 bg-white border rounded-lg">
+            <p class="font-medium">System Thinking</p>
+            <p class="mt-1 text-slate-500">
+              Memahami alur & keterkaitan komponen
+            </p>
+          </div>
+
+          <div class="p-4 bg-white border rounded-lg">
+            <p class="font-medium">Backend-Oriented</p>
+            <p class="mt-1 text-slate-500">
+              Fokus pada logika & keandalan sistem
+            </p>
+          </div>
+
+          <div class="p-4 bg-white border rounded-lg">
+            <p class="font-medium">Clean & Maintainable</p>
+            <p class="mt-1 text-slate-500">
+              Kode jelas, terstruktur, dan scalable
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW I WORK ================= -->
+<section class="relative overflow-hidden border-y border-slate-200">
+
+  <!-- BACKGROUND -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0
+                bg-gradient-to-b from-white via-slate-50 to-white"></div>
+
+    <!-- subtle grid -->
+    <div class="absolute inset-0 opacity-[0.04]"
+         style="background-image:
+         linear-gradient(#000 1px, transparent 1px),
+         linear-gradient(90deg,#000 1px, transparent 1px);
+         background-size:36px 36px;"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-6 py-28">
+
+    <!-- HEADER -->
+    <div class="max-w-xl reveal reveal-up">
+      <div class="flex items-center gap-3 text-sm text-slate-500">
+        <span class="w-10 h-[1px] bg-accent"></span>
+        <span>Workflow & Mindset</span>
+      </div>
+
+      <h2 class="mt-4 text-3xl md:text-4xl font-semibold">
+        Cara Saya Bekerja
+      </h2>
+
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        Saya membangun sistem dengan pendekatan terstruktur,
+        tidak langsung menulis kode, tetapi memahami masalah,
+        alur data, dan potensi risiko sejak awal.
+      </p>
+    </div>
+
+    <!-- STEPS -->
+    <div class="mt-16 grid md:grid-cols-4 gap-8">
+
+      <!-- STEP 1 -->
+      <div class="relative p-6 bg-white border rounded-xl
+                  reveal reveal-up delay-1">
+
+        <span class="absolute -top-3 -left-3
+                     w-10 h-10 rounded-full bg-accent
+                     text-white flex items-center justify-center
+                     text-sm font-semibold">
+          01
+        </span>
+
+        <p class="font-semibold text-lg">Memahami Masalah</p>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Menggali kebutuhan sistem, konteks penggunaan,
+          dan batasan teknis sebelum menentukan solusi.
+        </p>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="relative p-6 bg-white border rounded-xl
+                  reveal reveal-up delay-2">
+
+        <span class="absolute -top-3 -left-3
+                     w-10 h-10 rounded-full bg-accent
+                     text-white flex items-center justify-center
+                     text-sm font-semibold">
+          02
+        </span>
+
+        <p class="font-semibold text-lg">Menganalisis Alur Data</p>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Memetakan bagaimana data masuk, diproses,
+          disimpan, dan dikirim kembali ke pengguna.
+        </p>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="relative p-6 bg-white border rounded-xl
+                  reveal reveal-up delay-3">
+
+        <span class="absolute -top-3 -left-3
+                     w-10 h-10 rounded-full bg-accent
+                     text-white flex items-center justify-center
+                     text-sm font-semibold">
+          03
+        </span>
+
+        <p class="font-semibold text-lg">Mempertimbangkan Keamanan</p>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Mengidentifikasi potensi celah seperti validasi input,
+          autentikasi, dan kontrol akses sejak tahap desain.
+        </p>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="relative p-6 bg-white border rounded-xl
+                  reveal reveal-up delay-4">
+
+        <span class="absolute -top-3 -left-3
+                     w-10 h-10 rounded-full bg-accent
+                     text-white flex items-center justify-center
+                     text-sm font-semibold">
+          04
+        </span>
+
+        <p class="font-semibold text-lg">Implementasi & Evaluasi</p>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Menulis kode yang rapi dan terstruktur,
+          lalu mengevaluasi kembali apakah solusi
+          sudah aman dan mudah dipelihara.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- FOOT NOTE -->
+    <div class="mt-16 max-w-3xl reveal reveal-up delay-3">
+      <p class="text-slate-600 leading-relaxed">
+        Bagi saya, kode bukan hanya tentang “berjalan atau tidak”,
+        tetapi tentang bagaimana sistem dapat bertahan,
+        berkembang, dan tetap aman seiring waktu.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="relative overflow-hidden border-y border-slate-200">
+
+  <!-- BACKGROUND LAYER -->
+  <div class="absolute inset-0 -z-10">
+    <!-- gradient -->
+    <div class="absolute inset-0
+                bg-gradient-to-b from-slate-50 via-white to-slate-50"></div>
+
+    <!-- grid texture -->
+    <div class="absolute inset-0 opacity-[0.04]"
+         style="background-image:
+         linear-gradient(#000 1px, transparent 1px),
+         linear-gradient(90deg,#000 1px, transparent 1px);
+         background-size:32px 32px;"></div>
+
+    <!-- accent blobs -->
+    <div class="absolute -top-32 -left-32 w-[420px] h-[420px]
+                bg-emerald-300/20 rounded-full blur-3xl"></div>
+
+    <div class="absolute -bottom-40 -right-32 w-[420px] h-[420px]
+                bg-teal-200/20 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-6 py-28 reveal reveal-up">
+
+    <!-- HEADER -->
+    <div class="max-w-xl">
+      <div class="flex items-center gap-3 text-sm text-slate-500">
+        <span class="w-10 h-[1px] bg-accent"></span>
+        <span>Expertise & Focus</span>
+      </div>
+
+      <h2 class="mt-4 text-3xl md:text-4xl font-semibold">
+        Core Skills
+      </h2>
+
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        My skillset is shaped around building reliable systems,
+        understanding how data flows, and reducing security risks
+        through design decisions.
+      </p>
+    </div>
+
+    <!-- SKILL CARDS -->
+    <div class="mt-16 grid md:grid-cols-3 gap-8">
+
+      <!-- CARD 1 -->
+      <div class="group relative p-7 bg-white/80 backdrop-blur
+                  border border-slate-200 rounded-xl
+                  reveal reveal-up delay-1
+                  hover:-translate-y-1 hover:shadow-lg transition">
+
+        <!-- accent line -->
+        <span class="absolute top-0 left-0 w-full h-[3px]
+                     bg-gradient-to-r from-emerald-400 to-teal-400
+                     rounded-t-xl"></span>
+
+        <p class="font-semibold text-lg">Web Development</p>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Building responsive, maintainable interfaces
+          with clean structure and performance awareness.
+        </p>
+
+        <p class="mt-4 text-xs text-slate-500">
+          HTML • Tailwind • JavaScript • REST
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="group relative p-7 bg-white/80 backdrop-blur
+                  border border-slate-200 rounded-xl
+                  reveal reveal-up delay-2
+                  hover:-translate-y-1 hover:shadow-lg transition">
+
+        <span class="absolute top-0 left-0 w-full h-[3px]
+                     bg-gradient-to-r from-sky-400 to-indigo-400
+                     rounded-t-xl"></span>
+
+        <p class="font-semibold text-lg">Backend Systems</p>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Designing backend logic with focus on
+          data consistency, scalability, and reliability.
+        </p>
+
+        <p class="mt-4 text-xs text-slate-500">
+          PHP • Node.js • MySQL
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="group relative p-7 bg-white/80 backdrop-blur
+                  border border-slate-200 rounded-xl
+                  reveal reveal-up delay-3
+                  hover:-translate-y-1 hover:shadow-lg transition">
+
+        <span class="absolute top-0 left-0 w-full h-[3px]
+                     bg-gradient-to-r from-rose-400 to-orange-400
+                     rounded-t-xl"></span>
+
+        <p class="font-semibold text-lg">Security & Network</p>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Understanding threats, authentication flows,
+          and network behavior to reduce attack surfaces.
+        </p>
+
+        <p class="mt-4 text-xs text-slate-500">
+          TCP/IP • Auth • Secure Coding
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= TECH STACK & TOOLS ================= -->
+<section class="relative overflow-hidden">
+
+  <!-- BACKGROUND -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-slate-50"></div>
+    <div class="absolute inset-0 opacity-[0.05]"
+         style="background-image:radial-gradient(#000 1px, transparent 1px);
+                background-size:24px 24px;"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-6 py-28">
+
+    <!-- HEADER -->
+    <div class="max-w-xl reveal reveal-up">
+      <div class="flex items-center gap-3 text-sm text-slate-500">
+        <span class="w-10 h-[1px] bg-accent"></span>
+        <span>Technology I Use</span>
+      </div>
+
+      <h2 class="mt-4 text-3xl md:text-4xl font-semibold">
+        Tech Stack & Tools
+      </h2>
+
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        Stack dan tools yang saya gunakan dalam pengembangan web,
+        dengan fokus pada struktur, performa, dan keamanan.
+      </p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="mt-16 grid md:grid-cols-2 gap-8">
+
+      <!-- CARD 1 -->
+      <div class="p-8 bg-white border rounded-2xl
+                  reveal reveal-up delay-1
+                  hover:-translate-y-1 hover:shadow-lg transition">
+
+        <p class="text-xs text-slate-500 mb-2">Frontend</p>
+        <h3 class="text-xl font-semibold">Web Interface</h3>
+
+        <ul class="mt-6 space-y-2 text-sm text-slate-600 list-disc list-inside">
+          <li>Semantic HTML structure</li>
+          <li>Responsive layout (mobile-first)</li>
+          <li>Utility-first styling (Tailwind CSS)</li>
+          <li>Vanilla JavaScript interactions</li>
+        </ul>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="p-8 bg-white border rounded-2xl
+                  reveal reveal-up delay-2
+                  hover:-translate-y-1 hover:shadow-lg transition">
+
+        <p class="text-xs text-slate-500 mb-2">Backend</p>
+        <h3 class="text-xl font-semibold">Server & Logic</h3>
+
+        <ul class="mt-6 space-y-2 text-sm text-slate-600 list-disc list-inside">
+          <li>RESTful backend architecture</li>
+          <li>Server-side logic (PHP / Node.js)</li>
+          <li>Relational database design (MySQL)</li>
+          <li>Basic API & data validation</li>
+        </ul>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="p-8 bg-white border rounded-2xl
+                  reveal reveal-up delay-3
+                  hover:-translate-y-1 hover:shadow-lg transition">
+
+        <p class="text-xs text-slate-500 mb-2">Security</p>
+        <h3 class="text-xl font-semibold">Web Security</h3>
+
+        <ul class="mt-6 space-y-2 text-sm text-slate-600 list-disc list-inside">
+          <li>Authentication & authorization flow</li>
+          <li>Input validation & sanitization</li>
+          <li>Session & cookie handling</li>
+          <li>Awareness of common web vulnerabilities</li>
+        </ul>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="p-8 bg-white border rounded-2xl
+                  reveal reveal-up delay-4
+                  hover:-translate-y-1 hover:shadow-lg transition">
+
+        <p class="text-xs text-slate-500 mb-2">Workflow</p>
+        <h3 class="text-xl font-semibold">Tools & Environment</h3>
+
+        <ul class="mt-6 space-y-2 text-sm text-slate-600 list-disc list-inside">
+          <li>Version control with Git</li>
+          <li>Repository management via GitHub</li>
+          <li>Development using VS Code</li>
+          <li>Linux-based development environment</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+<section class="max-w-6xl mx-auto px-6 py-24 reveal reveal-up">
+  <h2 class="text-3xl font-semibold text-center">Featured Projects</h2>
+
+  <div class="mt-12 grid md:grid-cols-3 gap-8">
+    <div class="bg-white border rounded-lg overflow-hidden">
+      <div class="h-40 bg-slate-100 flex items-center justify-center">
+        <img src="img/project_login.png" class="h-full object-contain">
+      </div>
+      <div class="p-6">
+        <p class="font-semibold">Secure Login System</p>
+        <p class="text-sm text-slate-600 mt-2">
+          Auth system with hashing and session control.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white border rounded-lg overflow-hidden">
+      <div class="h-40 bg-slate-100 flex items-center justify-center">
+        <img src="img/project_portfolio.png" class="h-full object-contain">
+      </div>
+      <div class="p-6">
+        <p class="font-semibold">Portfolio Website</p>
+        <p class="text-sm text-slate-600 mt-2">
+          Clean UI with Tailwind and responsive layout.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white border rounded-lg overflow-hidden">
+      <div class="h-40 bg-slate-100 flex items-center justify-center">
+        <img src="img/project_network.png" class="h-full object-contain">
+      </div>
+      <div class="p-6">
+        <p class="font-semibold">Network Simulation</p>
+        <p class="text-sm text-slate-600 mt-2">
+          Traffic & topology analysis project.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECURITY AWARENESS ================= -->
+<section class="relative overflow-hidden bg-slate-950 text-slate-100">
+
+  <!-- DECORATION GRID -->
+  <div class="absolute inset-0 opacity-[0.06]"
+       style="background-image:linear-gradient(to right,#fff 1px,transparent 1px),
+              linear-gradient(to bottom,#fff 1px,transparent 1px);
+              background-size:48px 48px;"></div>
+
+  <div class="relative max-w-6xl mx-auto px-6 py-28">
+
+    <!-- HEADER -->
+    <div class="max-w-xl">
+      <p class="text-sm text-accent tracking-wide">Security Mindset</p>
+      <h2 class="mt-4 text-4xl font-semibold">
+        Security Awareness & Defense Principles
+      </h2>
+      <p class="mt-4 text-slate-400 leading-relaxed">
+        Saya membangun sistem dengan mindset pertahanan,
+        bukan sekadar menambal celah setelah terjadi masalah.
+      </p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="mt-20 grid md:grid-cols-2 gap-20 items-center">
+
+      <!-- VISUAL SIDE -->
+      <div class="relative flex justify-center">
+
+        <!-- SHIELD -->
+        <div class="relative w-64 h-64 rounded-full
+                    bg-gradient-to-br from-accent/20 to-transparent
+                    flex items-center justify-center">
+
+          <div class="w-40 h-40 rounded-2xl
+                      border border-accent/40
+                      flex items-center justify-center
+                      backdrop-blur">
+            <svg width="72" height="72" fill="none" viewBox="0 0 24 24"
+                 class="text-accent">
+              <path fill="currentColor"
+                d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/>
+            </svg>
+          </div>
+
+          <!-- RINGS -->
+          <span class="absolute inset-0 rounded-full border border-accent/20 animate-pulse"></span>
+        </div>
+
+      </div>
+
+      <!-- PRINCIPLES -->
+      <div class="relative pl-10 border-l border-slate-700 space-y-14">
+
+        <!-- ITEM -->
+        <div>
+          <h3 class="text-xl font-semibold">
+            Think in Attack Surface
+          </h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">
+            Setiap endpoint, input, dan data flow saya anggap sebagai
+            potensi titik serang yang perlu dikontrol sejak desain awal.
+          </p>
+        </div>
+
+        <!-- ITEM -->
+        <div>
+          <h3 class="text-xl font-semibold">
+            Secure by Default
+          </h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">
+            Konfigurasi awal sistem harus aman tanpa bergantung
+            pada asumsi bahwa user atau environment selalu ideal.
+          </p>
+        </div>
+
+        <!-- ITEM -->
+        <div>
+          <h3 class="text-xl font-semibold">
+            Assume Breach
+          </h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">
+            Sistem saya rancang dengan asumsi kebocoran bisa terjadi,
+            sehingga dampak dan akses harus tetap terbatas.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ================= LEARNING JOURNEY ================= -->
+<section class="relative bg-slate-50 overflow-hidden">
+
+  <!-- BACKGROUND DECOR -->
+  <div class="absolute inset-0 opacity-[0.04]"
+       style="background-image:radial-gradient(#000 1px, transparent 1px);
+              background-size:32px 32px;"></div>
+
+  <div class="relative max-w-6xl mx-auto px-6 py-28">
+
+    <!-- HEADER -->
+    <div class="max-w-xl">
+      <p class="text-sm text-accent tracking-wide">My Path</p>
+      <h2 class="mt-4 text-4xl font-semibold">Learning Journey</h2>
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        Perjalanan belajar saya tidak instan, tapi bertahap.
+        Setiap fase membentuk cara saya berpikir dan membangun sistem.
+      </p>
+    </div>
+
+    <!-- JOURNEY -->
+    <div class="relative mt-24">
+
+      <!-- CENTER LINE -->
+      <div class="absolute left-1/2 top-0 h-full w-[2px]
+                  bg-gradient-to-b from-accent/40 via-slate-300 to-transparent
+                  -translate-x-1/2"></div>
+
+      <!-- ITEM 1 -->
+      <div class="relative grid md:grid-cols-2 gap-12 mb-24">
+        <div class="md:text-right md:pr-16">
+          <div class="inline-block p-6 bg-white border rounded-xl shadow-sm">
+            <h3 class="text-lg font-semibold">Networking & TKJ</h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Fondasi awal saya berasal dari dunia jaringan:
+              IP, subnet, routing, dan bagaimana data berpindah.
+            </p>
+          </div>
+        </div>
+        <div></div>
+
+        <!-- NODE -->
+        <span class="absolute left-1/2 top-6 w-4 h-4
+                     bg-accent rounded-full -translate-x-1/2"></span>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="relative grid md:grid-cols-2 gap-12 mb-24">
+        <div></div>
+        <div class="md:pl-16">
+          <div class="inline-block p-6 bg-white border rounded-xl shadow-sm">
+            <h3 class="text-lg font-semibold">Web Development</h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Mulai membangun antarmuka dan logika web
+              menggunakan HTML, CSS, JavaScript, dan Tailwind.
+            </p>
+          </div>
+        </div>
+
+        <!-- NODE -->
+        <span class="absolute left-1/2 top-6 w-4 h-4
+                     bg-accent rounded-full -translate-x-1/2"></span>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="relative grid md:grid-cols-2 gap-12 mb-24">
+        <div class="md:text-right md:pr-20">
+          <div class="inline-block p-6 bg-white border rounded-xl shadow-sm">
+            <h3 class="text-lg font-semibold">Backend Systems</h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Fokus pada logika server, database, autentikasi,
+              dan bagaimana sistem berjalan secara reliabel.
+            </p>
+          </div>
+        </div>
+        <div></div>
+
+        <!-- NODE -->
+        <span class="absolute left-1/2 top-6 w-4 h-4
+                     bg-accent rounded-full -translate-x-1/2"></span>
+      </div>
+
+      <!-- ITEM 4 -->
+      <div class="relative grid md:grid-cols-2 gap-12">
+        <div></div>
+        <div class="md:pl-24">
+          <div class="inline-block p-6 bg-white border rounded-xl shadow-sm">
+            <h3 class="text-lg font-semibold">Web Security Focus</h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Saat ini fokus pada secure coding, attack surface,
+              dan membangun sistem dengan mindset pertahanan.
+            </p>
+          </div>
+        </div>
+
+        <!-- NODE -->
+        <span class="absolute left-1/2 top-6 w-4 h-4
+                     bg-accent rounded-full -translate-x-1/2"></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="relative bg-slate-900 text-white reveal reveal-tilt">
+  <div class="relative max-w-6xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl font-semibold">Let’s Build Something Secure</h2>
+    <p class="mt-4 text-slate-300">
+      Open for collaboration and real-world systems.
+    </p>
+    <a href="contact.html"
+       class="inline-block mt-8 px-6 py-3 rounded-md bg-accent
+              hover:bg-emerald-600 transition">
+      Get in Touch
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-slate-200 bg-white reveal reveal-up">
+  <div class="max-w-6xl mx-auto px-6 py-12 text-sm text-slate-500">
+    © 2026 Putra Febrian
+  </div>
+</footer>
+
+<!-- ================= SCROLL OBSERVER ================= -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting)
+        entry.target.classList.add('active');
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

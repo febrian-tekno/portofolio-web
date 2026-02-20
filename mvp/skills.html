@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Putra Febrian | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#10B981'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+<nav class="border-b border-slate-200 bg-white">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="index.html" class="font-semibold">Putra Febrian</a>
+    <div class="flex gap-6 text-sm text-slate-600">
+      <a href="index.html" class="hover:text-slate-900">Home</a>
+      <a href="about.html" class="hover:text-slate-900">About</a>
+      <a href="skills.html" class="hover:text-slate-900">Skills</a>
+      <a href="projects.html" class="hover:text-slate-900">Projects</a>
+      <a href="contact.html" class="hover:text-slate-900">Contact</a>
+    </div>
+  </div>
+</nav>
+<!-- NAVBAR -->
+
+<main class="max-w-6xl mx-auto px-6 py-24">
+  <h1 class="text-3xl font-bold mb-12">Skills</h1>
+
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <div class="border border-slate-200 rounded-lg p-6 bg-white">
+      <h2 class="font-semibold mb-4">Technical Skills</h2>
+      <ul class="space-y-3 text-slate-600 text-sm">
+        <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+        <li><strong>Backend:</strong> Node.js, Express.js, REST API</li>
+        <li><strong>Security:</strong> OWASP Top 10 (basic)</li>
+        <li><strong>Networking:</strong> TCP/IP, basic routing</li>
+        <li><strong>Tools:</strong> Linux (basic), Git & GitHub</li>
+      </ul>
+    </div>
+
+    <div class="border border-slate-200 rounded-lg p-6 bg-white">
+      <h2 class="font-semibold mb-4">Supporting Skills</h2>
+      <ul class="space-y-3 text-slate-600 text-sm">
+        <li>Technical documentation</li>
+        <li>Problem solving</li>
+        <li>Technical presentation</li>
+        <li>Visual documentation (PDD)</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-200 mt-24">
+  <div class="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-500">
+    © 2026 Putra Febrian — Built with a security-aware mindset.
+  </div>
+</footer>
+</body>
+</html>
